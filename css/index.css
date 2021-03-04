@@ -17,11 +17,11 @@ h1 {
   font-size: 35px;
 }
 
-#about{
+#mission{
   text-align: center;
 }
 
-#about p{
+#mission p{
   line-height: 1.7;
   padding-left: 10%;
   padding-right: 10%;
@@ -34,6 +34,18 @@ h1 {
 }
 
 #community p{
+  line-height: 1.7;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#contact-us {
+  text-align: center;
+}
+
+#contact-us p{
   line-height: 1.7;
   padding-left: 10%;
   padding-right: 10%;
