@@ -54,6 +54,10 @@ h1 {
   width: 40%; display: block; margin-left: auto; margin-right: auto;
 }
 
+.image2{
+  width: 50%; display: block; margin-left: auto; margin-right: auto;
+}
+
 .image1{
   width: 97.5%; display: block; margin-left: auto; margin-right: auto;
 }
@@ -72,6 +76,10 @@ h1 {
   .image {
     width: 95%; display: block; margin-left: auto; margin-right: auto;
 
+  }
+
+  .image2{
+    width: 100%; display: block; margin-left: auto; margin-right: auto;
   }
 
 }
