@@ -1,2 +1,2 @@
 # Thank-Blue
-https://thank-blue.web.app/#contact-us
+https://thank-blue.web.app/
