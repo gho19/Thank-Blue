@@ -49,7 +49,7 @@ a.logo {
     font-size: 90px;
     display: flex;
     list-style: none;
-    width: 68vw;
+    width: 80vw;
     padding: 0 0.7vw;
     justify-content: space-evenly;
     align-items: center;
@@ -60,9 +60,10 @@ a.logo {
     font-weight: bolder;
     color: #00274C;
     margin: 0 0.9vw;
-    font-size: 24px;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    font-size: 18px;
+    
+    /* margin-top: 10%;
+    margin-bottom: 10%; */
 }
 .nav-links li a:hover {
     color: #8CC1FF;
@@ -113,12 +114,12 @@ a.logo {
         top: 50%;
         transform: translate(-5%, -50%);
         z-index: 2;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
     }
     .nav-links{
         position: fixed;
         background: white;
-        opacity: 90%;
+        opacity: 95%;
         padding-top:5%;
         padding-bottom:5%;
         height: 100vh;
@@ -126,7 +127,7 @@ a.logo {
         flex-direction: column;
         clip-path: circle(50px at 90% -20%);
         -webkit-clip-path: circle(50px at 90% -10%);
-        transition: all 0.3s ease-out;
+        transition: all 0.2s ease-out;
         pointer-events: none;
     }
     .nav-links.open{
