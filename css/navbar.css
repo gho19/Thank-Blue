@@ -113,12 +113,12 @@ a.logo {
         top: 50%;
         transform: translate(-5%, -50%);
         z-index: 2;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
     }
     .nav-links{
         position: fixed;
         background: white;
-        opacity: 90%;
+        opacity: 95%;
         padding-top:5%;
         padding-bottom:5%;
         height: 100vh;
@@ -126,7 +126,7 @@ a.logo {
         flex-direction: column;
         clip-path: circle(50px at 90% -20%);
         -webkit-clip-path: circle(50px at 90% -10%);
-        transition: all 0.3s ease-out;
+        transition: all 0.2s ease-out;
         pointer-events: none;
     }
     .nav-links.open{
