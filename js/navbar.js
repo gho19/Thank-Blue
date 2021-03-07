@@ -2,6 +2,14 @@ const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
 
+navLinks.addEventListener('click',()=>{
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+    hamburger.classList.toggle("toggle");
+})
+
 hamburger.addEventListener('click', ()=>{
    //Animate Links
     navLinks.classList.toggle("open");
