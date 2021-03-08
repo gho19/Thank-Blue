@@ -4,6 +4,7 @@
     color: #333;
     font-family: 'Spartan', sans-serif;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 body {
@@ -58,7 +59,6 @@ a.logo {
 .nav-links li a{
     text-decoration: none;
     font-weight: bolder;
-    color: #00274C;
     margin: 0 0.9vw;
     font-size: 18px;
     
