@@ -43,26 +43,26 @@ a.logo {
   background-repeat: no-repeat;
   background-size: 2% 2px;
   font-weight: bold;
-
 }
 
 
 /*Styling Links*/
 .nav-links{
-    font-size: 90px;
     display: flex;
     list-style: none;
-    width: 68vw;
+    width: 70vw;
     padding: 0 0.7vw;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 25px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .nav-links li a{
     text-decoration: none;
     margin: 0 0.9vw;
-    font-size: 20px;
-
 }
 .nav-links li a:hover {
     color: #8CC1FF;
