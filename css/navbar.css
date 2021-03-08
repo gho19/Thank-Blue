@@ -2,14 +2,17 @@
     margin: 0;
     padding: 0;
     color: #333;
-    font-family: 'League', sans-serif;
+
+    font-family: 'Open Sans', sans-serif;
+
     letter-spacing: 1px;
+    text-align: center;
 }
 
 body {
     overflow-x: hidden;
     opacity: 1;
-    transition: 1s opacity;
+    transition: 0.3s opacity;
 }
 
 body.fade {
@@ -110,7 +113,7 @@ a.logo {
         top: 50%;
         transform: translate(-5%, -50%);
         z-index: 2;
-        transition: all 0.7s ease;
+        transition: all 0.2s linear;
     }
     .nav-links{
         position: fixed;
@@ -120,7 +123,8 @@ a.logo {
         flex-direction: column;
         clip-path: circle(50px at 90% -20%);
         -webkit-clip-path: circle(50px at 90% -10%);
-        transition: all 1s ease-out;
+
+        transition: all 0.2s ease;
         pointer-events: none;
     }
     .nav-links.open{
