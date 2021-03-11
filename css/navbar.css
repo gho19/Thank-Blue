@@ -136,26 +136,26 @@ a.logo {
         opacity: 0;
     }
     .nav-links li:nth-child(1){
-        transition: all 0.5s ease 0.2s;
+        transition: all 0.1s ease 0.1s;
     }
     .nav-links li:nth-child(2){
-        transition: all 0.5s ease 0.4s;
+        transition: all 0.1s ease 0.14s;
     }
     .nav-links li:nth-child(3){
-        transition: all 0.5s ease 0.6s;
+        transition: all 0.1s ease 0.18s;
     }
     .nav-links li:nth-child(4){
-        transition: all 0.5s ease 0.7s;
+        transition: all 0.1s ease 0.22s;
     }
     .nav-links li:nth-child(5){
-        transition: all 0.5s ease 0.8s;
+        transition: all 0.1s ease 0.26s;
     }
     .nav-links li:nth-child(6){
-        transition: all 0.5s ease 0.9s;
+        transition: all 0.1s ease 0.3s;
         margin: 0;
     }
     .nav-links li:nth-child(7){
-        transition: all 0.5s ease 1s;
+        transition: all 0.1s ease 0.34s;
         margin: 0;
     }
     li.fade{
