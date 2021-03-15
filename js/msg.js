@@ -66,11 +66,10 @@ function parseMsg(r){
     }
     if (perm.includes('Full')){
         name += ' ' + last_name;
+    }else if (perm == ''){
+        name = first_name;
     }else if (last_name != ''){
         name += ' ' + last_name.charAt(0).toUpperCase();
-    }else if (perm == ''){
-        name = 'Anonymous';
-        yr = '';
     }
     name = titleCase(name);
     return '"' + msg + '"\n\n– ' + name + yr;
