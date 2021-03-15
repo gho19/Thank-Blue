@@ -55,10 +55,10 @@ function shuffle(sourceArray) {
 }
 
 function parseMsg(r){
-    var first_name = data[r][firstName]["$t"];
-    var last_name = data[r][lastName]["$t"];
-    var msg = data[r][message]["$t"];
-    var yr = data[r][year]["$t"];
+    var first_name = data[r][firstName]["$t"].trim();
+    var last_name = data[r][lastName]["$t"].trim();
+    var msg = data[r][message]["$t"].trim();
+    var yr = data[r][year]["$t"].trim();
     var perm = data[r][permission]["$t"];
     let name = first_name;
     if (yr.includes('Class of')){
