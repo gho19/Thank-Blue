@@ -62,15 +62,18 @@ function parseMsg(r){
     var perm = data[r][permission]["$t"];
     let name = first_name;
     if (yr.includes('Class of')){
-        yr = "'" + parseInt(yr.slice(-2));
+        yr = ", '" + parseInt(yr.slice(-2));
     }
     if (perm.includes('Full')){
         name += ' ' + last_name;
     }else if (last_name != ''){
         name += ' ' + last_name.charAt(0).toUpperCase();
+    }else if (perm == ''){
+        name = 'Anonymous';
+        yr = '';
     }
     name = titleCase(name);
-    return '"' + msg + '"\n\n– ' + name + ", " + yr;
+    return '"' + msg + '"\n\n– ' + name + yr;
 }
 
 function readData(parent) {
