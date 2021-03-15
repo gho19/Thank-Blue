@@ -63,6 +63,8 @@ function parseMsg(r){
     let name = first_name;
     if (yr.includes('Class of')){
         yr = ", '" + parseInt(yr.slice(-2));
+    }else {
+        yr = ", " + yr;
     }
     if (perm.includes('Full')){
         name += ' ' + last_name;
