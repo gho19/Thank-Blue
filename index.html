@@ -71,10 +71,26 @@
     <script src="js/navbar.js"></script>
 
 
-    <div class="apply">
-      <br><br><br>
-      <img src="img/logo.png" class="image" data-aos="fade-up">
-      
+    <div class="front">
+      <div class='box-container'>
+        <div class="text-box">
+          <p class="msg-text" id='front-text'></p>
+      </div>
+      <img src="img/logo.png" id="logopic" class="image" data-aos="fade-up">
+      </div>
+      <br>
+      <br>
+      <div id="progressbox">
+        <div id="progressbar">
+          <div id='progress'></div>
+        </div>
+        <div id="progresspercent"></div>  
+      </div>
+      <div id="progresstext"></div>
+      <br>
+      Help us reach our goal of 1000 messages!
+      <br>
+      <a href="#thank-you"><button class='btn' type='button' id='thank'>Send a Thank You!</button></a>
     </div>
 
 
@@ -114,10 +130,7 @@
     
     <div id="community">
       <h1> MESSAGES </h1>
-      <div class="progress">
-        <div id="progress" class="progress-bar progress-bar-striped" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="1000"></div>
-      </div>
-      <br><br>
+      <br>
         <div id="messages" class="msg-row" data-aos="fade-up">
         </div>
       

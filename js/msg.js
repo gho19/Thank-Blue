@@ -7,9 +7,11 @@ var year = 'gsx$graduationyear';
 var index = 0;
 var limit = 6;
 var cur = 0;
+var frontIndex = 0;
 
 function doData(json) {
     data = shuffle(json.feed.entry);
+    frontIndex = data.length - 1;
 }
 
 function drawMsg(messages) {
@@ -17,10 +19,9 @@ function drawMsg(messages) {
     var community = $('#messages');
     for(var c=0; c<messages.length; c++) {
         var elem = $(
-            `<div class="column" style="position: relative;
-                display: flex; align-items: center; justify-content: center;">
+            `<div class="column box-container">
                 <div class="text-box">
-                    <p class="msg-text"> ${messages[c].msg + '\n\n– ' + messages[c].name + ", " + messages[c].yr} </p>
+                    <p class="msg-text"> ${messages[c]} </p>
                 </div>
                 <img src="img/msg_${cur ? 'blue' : 'maize'}.png" class="image1">
             </div>`).hide().fadeIn(500);
@@ -53,6 +54,25 @@ function shuffle(sourceArray) {
     return sourceArray;
 }
 
+function parseMsg(r){
+    var first_name = data[r][firstName]["$t"];
+    var last_name = data[r][lastName]["$t"];
+    var msg = data[r][message]["$t"];
+    var yr = data[r][year]["$t"];
+    var perm = data[r][permission]["$t"];
+    let name = first_name;
+    if (yr.includes('Class of')){
+        yr = "'" + parseInt(yr.slice(-2));
+    }
+    if (perm.includes('Full')){
+        name += ' ' + last_name;
+    }else if (last_name != ''){
+        name += ' ' + last_name.charAt(0).toUpperCase();
+    }
+    name = titleCase(name);
+    return '"' + msg + '"\n\n– ' + name + ", " + yr;
+}
+
 function readData(parent) {
     var rowData = [];
     if (index >= data.length){
@@ -61,33 +81,37 @@ function readData(parent) {
         return;
     }
     for(var r=index; r<Math.min(data.length,index+limit); r++) {
-        var first_name = data[r][firstName]["$t"];
-        var last_name = data[r][lastName]["$t"];
-        var msg = data[r][message]["$t"];
-        var yr = data[r][year]["$t"];
-        var perm = data[r][permission]["$t"];
-        let name = first_name;
-        if (yr.includes('Class of')){
-            yr = "'" + parseInt(yr.slice(-2));
-        }
-        if (perm.includes('Full')){
-            name += ' ' + last_name;
-        }else if (last_name != ''){
-            name += ' ' + last_name.charAt(0).toUpperCase();
-        }
-        name = titleCase(name);
         //console.log([msg, name, yr].join(' '));
-        rowData.push({'msg': msg, 'name':name, 'yr': yr});
+        rowData.push(parseMsg(r));
     }
     index += limit;
     index = Math.min(data.length,index);
-    console.log()
     drawMsg(rowData);
+    if (index >= data.length){
+        $('#load').hide();
+        $('#community').append($('<p>No more messages to show for now!</p>'));
+        return;
+    }
+}
+
+function showMsg(){
+    $("#front-text").fadeToggle(500);
+    var m = parseMsg(frontIndex);
+    frontIndex--;
+    if (frontIndex <= 0){
+        frontIndex = data.length - 1;
+    }
+    $("#front-text").text(m);
+    setTimeout(()=>{$("#front-text").fadeToggle(500)},4500);
+    setTimeout(showMsg,5000);
 }
 
 $(document).ready(function(){
-    $("#progress").attr('width',data.length/10 + '%');
-    $("#progress").attr('aria-valuenow',data.length);
+    $("#front-text").hide();
+    $('#progress').css('width',data.length/10 + '%');
+    $('#progresspercent').text(data.length/10 + '%');
+    $('#progresstext').text(`${data.length}/1000 messages collected.`);
     readData();
     $("#load").click(readData);
+    setTimeout(()=>{$("#logopic").fadeTo("slow",0.15,showMsg)},1000);
 });

@@ -60,9 +60,11 @@ h1 {
   width: 90%; display: block; margin-left: auto;margin-right: auto;
 }
 .image{
-  width: 40%; display: block; margin-left: auto; margin-right: auto;
+  width: 25%; display: flex; margin-left: auto; margin-right: auto;
 }
-
+.front{
+  padding-top: 9vh;
+}
 .image2{
   width: 55%; display: block; margin-left: auto; margin-right: auto;
 }
@@ -89,13 +91,20 @@ h1 {
   background-color: #8cc2ff63;
   cursor:pointer;
 }
-
+#thank{
+  background-color: #8CC1FF;
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: 1.5vw;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
 .msg-text{
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9vw;
+  font-size: 1vw;
   height: 80%;
   width: 80%;
 }
@@ -114,17 +123,65 @@ h1 {
  height: 100%;
  vertical-align: middle;
 } */
-
-
+#progressbar {
+  background-color: #f3f3f3;
+  border-radius: 13px;
+  width: 50%;
+  padding-bottom: 10px;
+  margin-right: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto; */
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+#progressbox{
+  display: flex; align-items: center; justify-content: center;
+  padding-bottom: 10px;
+}
+#front-text{
+  width: 80%;
+  font-size: 2vw;
+  color: black;
+}
+#progress {
+  background-color: #8CC1FF;
+  text-align: center;
+  /* Adjust with JavaScript */
+  width: 40%;
+  height: 20px;
+  border-radius: 13px;
+}
+.box-container{
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
 @media screen and (max-width: 700px) {
   .msg-text{
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1vh;
+    font-size: 1.4vh;
     height: 80%;
     width: 80%;
+  }
+  #thank{
+    background-color: #8CC1FF;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5vh;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  #front-text{
+    width: 80%;
+    font-size: 2vh;
+    color: black;
   }
   .home {
     width:95%;
@@ -148,7 +205,7 @@ h1 {
   }
 
   .image {
-    width: 95%; display: block; margin-left: auto; margin-right: auto;
+    width: 70%; display: block; margin-left: auto; margin-right: auto;
 
   }
 
