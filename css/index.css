@@ -18,7 +18,7 @@ h1 {
 }
 
 #mission p{
-  line-height: 1.7;
+  line-height: 1.5;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 2%;
@@ -26,7 +26,8 @@ h1 {
 }
 
 #community p{
-  line-height: 1.7;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 2%;
@@ -35,11 +36,15 @@ h1 {
 
 
 #contact-us p{
-  line-height: 1.7;
+  line-height: 1.5;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 2%;
   padding-bottom: 2%;
+}
+
+#community {
+  margin-top: 10vh;
 }
 
 .home {
@@ -51,6 +56,9 @@ h1 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.25);
 }
 
+.msg-row{
+  width: 90%; display: block; margin-left: auto;margin-right: auto;
+}
 .image{
   width: 40%; display: block; margin-left: auto; margin-right: auto;
 }
@@ -61,10 +69,63 @@ h1 {
 
 .image1{
   width: 97.5%; display: block; margin-left: auto; margin-right: auto;
+  padding-bottom: 3%; padding-top: 3%;
 }
 
-@media screen and (max-width: 700px) {
+.btn {
+  margin-top: 5vh;
+  border: solid;
+  border-color: #2488fa;
+  border-radius: 16px;
+  border-width: 0.1vw;
 
+  background-color: white;
+  color: black;
+  font-size: 1vw;
+  padding: 1.5vh 2vw;
+  border-radius: 8px;
+}
+.btn:hover {
+  background-color: #8cc2ff63;
+  cursor:pointer;
+}
+
+.msg-text{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9vw;
+  height: 80%;
+  width: 80%;
+}
+.text-box {
+  position: absolute;
+  display: flex;    
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  white-space: pre-line;
+}
+/* .text-box:before {
+ content: '';
+ display: inline-block;
+ height: 100%;
+ vertical-align: middle;
+} */
+
+
+@media screen and (max-width: 700px) {
+  .msg-text{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vh;
+    height: 80%;
+    width: 80%;
+  }
   .home {
     width:95%;
     float:center;
@@ -72,6 +133,18 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  }
+  .btn {
+    margin-top: 3vh;
+    border: solid;
+    border-color: #2488fa;
+    border-radius: 16px;
+    border-width: 0.1vh;
+
+    background-color: white;
+    color: black;
+    font-size: 1.5vh;
+    padding: 1.6vh 4vw;
   }
 
   .image {
