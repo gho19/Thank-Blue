@@ -61,7 +61,7 @@ function parseMsg(r){
     var yr = data[r][year]["$t"].trim();
     var perm = data[r][permission]["$t"];
     let name = first_name;
-    if (yr.includes('Class of')){
+    if (yr.includes('Class of') || !isNaN(yr.slice(-2))){
         yr = ", '" + parseInt(yr.slice(-2));
     }else {
         yr = ", " + yr;
