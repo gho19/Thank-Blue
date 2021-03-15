@@ -18,28 +18,33 @@ h1 {
 }
 
 #mission p{
-  line-height: 1.7;
+  line-height: 1.5;
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 #community p{
-  line-height: 1.7;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 
 #contact-us p{
-  line-height: 1.7;
+  line-height: 1.5;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 2%;
   padding-bottom: 2%;
+}
+
+#community {
+  margin-top: 10vh;
 }
 
 .home {
@@ -51,20 +56,134 @@ h1 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.25);
 }
 
-.image{
-  width: 40%; display: block; margin-left: auto; margin-right: auto;
+.msg-row{
+  width: 90%; display: block; margin-left: auto;margin-right: auto;
 }
-
+.image{
+  width: 25%; display: flex; margin-left: auto; margin-right: auto;
+}
+.front{
+  padding-top: 9vh;
+}
 .image2{
   width: 55%; display: block; margin-left: auto; margin-right: auto;
 }
 
 .image1{
-  width: 97.5%; display: block; margin-left: auto; margin-right: auto;
+  width: 100%; display: block; margin: auto;
+  padding-bottom: 10px; padding-top: 10px;
 }
 
-@media screen and (max-width: 700px) {
+.btn {
+  margin-top: 5vh;
+  border: solid;
+  border-color: #2488fa;
+  border-radius: 16px;
+  border-width: 0.1vw;
 
+  background-color: white;
+  color: black;
+  font-size: 1vw;
+  padding: 1.5vh 2vw;
+  border-radius: 8px;
+}
+.btn:hover {
+  background-color: #8cc2ff63;
+  cursor:pointer;
+}
+#thank{
+  background-color: #8CC1FF;
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: 1.5vw;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.msg-text{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+  height: 80%;
+  width: 80%;
+}
+.text-box {
+  position: absolute;
+  display: flex;    
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  white-space: pre-line;
+}
+/* .text-box:before {
+ content: '';
+ display: inline-block;
+ height: 100%;
+ vertical-align: middle;
+} */
+#progressbar {
+  background-color: #f3f3f3;
+  border-radius: 13px;
+  width: 50%;
+  padding-bottom: 10px;
+  margin-right: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto; */
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+#progressbox{
+  display: flex; align-items: center; justify-content: center;
+  padding-bottom: 10px;
+}
+#front-text{
+  width: 80%;
+  font-size: 2vw;
+  color: black;
+}
+#progress {
+  background-color: #8CC1FF;
+  text-align: center;
+  /* Adjust with JavaScript */
+  width: 40%;
+  height: 20px;
+  border-radius: 13px;
+}
+.box-container{
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+@media screen and (max-width: 700px) {
+  .msg-text{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4vh;
+    height: 80%;
+    width: 80%;
+  }
+  #thank{
+    background-color: #8CC1FF;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5vh;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  #front-text{
+    width: 80%;
+    font-size: 2vh;
+    color: black;
+  }
   .home {
     width:95%;
     float:center;
@@ -73,9 +192,21 @@ h1 {
     margin-right: auto;
     box-shadow: 0 4px 8px rgba(0,0,0,0.25);
   }
+  .btn {
+    margin-top: 3vh;
+    border: solid;
+    border-color: #2488fa;
+    border-radius: 16px;
+    border-width: 0.1vh;
+
+    background-color: white;
+    color: black;
+    font-size: 1.5vh;
+    padding: 1.6vh 4vw;
+  }
 
   .image {
-    width: 95%; display: block; margin-left: auto; margin-right: auto;
+    width: 70%; display: block; margin-left: auto; margin-right: auto;
 
   }
 
@@ -96,7 +227,9 @@ body {
 }
 
 .column {
-  float: left;
+  display: inline-flex;
+  flex-direction: row;
+  overflow: wrap;
   width: 33%;
   padding: 0 10px;
 }
@@ -115,8 +248,8 @@ body {
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
-    display: block;
-    margin-bottom: 20px;
+    display: flex;
+    margin-bottom: 10px;
   }
 }
 

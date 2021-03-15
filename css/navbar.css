@@ -25,6 +25,7 @@ nav {
     width: 100vw;
     background-color: white;
     display: flex;
+    color: #333;
     z-index: 10;
 }
 
@@ -35,7 +36,7 @@ nav {
 }
 
 a.logo {
-  font-size: 40px;
+  font-size: 5vh;
   font-weight: bold;
   font-family: 'Spartan', sans-serif;
   display: inline-block;
@@ -54,7 +55,7 @@ a.logo {
     padding: 0 0.7vw;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: bold;
     padding-top: 25px;
     font-family: 'Open Sans', sans-serif;
@@ -91,7 +92,7 @@ a.logo {
         text-align: center;
     }
     a.logo {
-      font-size: 30px;
+      font-size: 3vh;
       font-weight: bold;
       font-family: 'Spartan', sans-serif;
       display: inline-block;
