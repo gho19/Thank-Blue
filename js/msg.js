@@ -8,10 +8,15 @@ var index = 0;
 var limit = 6;
 var cur = 0;
 var frontIndex = 0;
+var indices = [];
 
 function doData(json) {
-    data = shuffle(json.feed.entry);
+    data = json.feed.entry;
     frontIndex = data.length - 1;
+    for (let i = 0; i < data.length; i++){
+        indices.push(i);
+    }
+    indices = shuffle(indices);
 }
 
 function drawMsg(messages) {
@@ -55,16 +60,16 @@ function shuffle(sourceArray) {
 }
 
 function parseMsg(r){
-    var first_name = data[r][firstName]["$t"].trim();
-    var last_name = data[r][lastName]["$t"].trim();
-    var msg = data[r][message]["$t"].trim();
-    var yr = data[r][year]["$t"].trim();
-    var perm = data[r][permission]["$t"];
+    var first_name = data[indices[r]][firstName]["$t"].trim();
+    var last_name = data[indices[r]][lastName]["$t"].trim();
+    var msg = data[indices[r]][message]["$t"].trim();
+    var yr = data[indices[r]][year]["$t"].trim();
+    var perm = data[indices[r]][permission]["$t"];
     let name = first_name;
-    if (yr.includes('Class of') || !isNaN(yr.slice(-2))){
+    if (yr.toLowerCase().includes('class of')){
         yr = ", '" + yr.slice(-2);
     }else {
-        yr = ", " + yr;
+        yr = ", " + titleCase(yr);
     }
     if (perm.includes('Full')){
         name += ' ' + last_name;
