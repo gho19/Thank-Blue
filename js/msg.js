@@ -1,5 +1,5 @@
 var data = null;
-var permission = 'gsx$iwouldliketoallowthankbluetousethefollowinginformationontheirwebsitesocialmediaforhealthcareworkersandthegeneralpublictoseedefaultismessageonly';
+var permission = 'gsx$iwouldliketoallowthankbluetousethefollowinginformationontheirwebsitesocialmediaforhealthcareworkersandthegeneralpublictoseedefaultisfirstnameyearandmessageonly';
 var firstName = 'gsx$firstname';
 var lastName = 'gsx$lastnameoptional';
 var message = 'gsx$messagetohealthcareworkers';
