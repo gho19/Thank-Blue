@@ -75,7 +75,7 @@ h1 {
 }
 
 .btn {
-  margin-top: 5vh;
+  margin-top: 3vh;
   border: solid;
   border-color: #2488fa;
   border-radius: 16px;
@@ -97,6 +97,14 @@ h1 {
   font-weight: bold;
   color: white;
   font-size: 1.5vw;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+#nominate{
+  background-color: #fff78c;
+  border: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1vw;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 .msg-text{
