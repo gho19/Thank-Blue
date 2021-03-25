@@ -187,6 +187,14 @@ h1 {
     font-size: 1.5vh;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   }
+  #nominate{
+    background-color: #fff78c;
+    border: none;
+    font-weight: bold;
+    color: black;
+    font-size: 1vh;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
   #front-text{
     width: 80%;
     font-size: 2vh;
