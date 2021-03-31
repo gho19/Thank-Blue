@@ -154,6 +154,7 @@ h1 {
 }
 #front-text{
   width: 70%;
+  font-weight: bold;
   line-height: 1.5em;
   font-size: 1.4vw;
   color: black;
@@ -197,6 +198,7 @@ h1 {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   }
   #front-text{
+    font-weight: bold;
     width: 70%;
     font-size: 1.4vh;
     line-height: 1.5em;
