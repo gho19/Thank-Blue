@@ -23,14 +23,24 @@ function drawMsg(messages) {
     if (messages == null) return null;
     var community = $('#messages');
     for(var c=0; c<messages.length; c++) {
+        let size = ($(window).width() < 700) ? `1.4vh` : `0.9vw`;
+        if (messages[c].length > 300){
+            size = ($(window).width() < 700) ? `1vh` : `0.6vw`;
+        }
         var elem = $(
             `<div class="column box-container">
                 <div class="text-box">
-                    <p class="msg-text"> ${messages[c]} </p>
+                <p class="msg-text" style = "font-size: ${size}"> ${messages[c]} </p>
                 </div>
                 <img src="img/msg_${cur ? 'blue' : 'maize'}.png" class="image1">
             </div>`).hide().fadeIn(500);
         elem.appendTo(community);
+        if (messages[c].length > 600){
+            if ($(window).width() < 700)
+                $("#front-text").css('font-size',`1vw`);
+            else
+                $("#front-text").css('font-size',`1vh`);
+        }
         cur = !cur;
     }
     //return community;
@@ -111,8 +121,15 @@ function showMsg(){
         frontIndex = data.length - 1;
     }
     $("#front-text").text(m);
-    setTimeout(()=>{$("#front-text").fadeToggle(500)},4500);
-    setTimeout(showMsg,5000);
+    let time = 25 * m.length + 2000;
+    if (m.length > 600){
+        if ($(window).width() < 700)
+            $("#front-text").css('font-size',`1vh`);
+        else
+            $("#front-text").css('font-size',`1vw`);
+    }
+    setTimeout(()=>{$("#front-text").fadeToggle(500)},time-500);
+    setTimeout(showMsg,time);
 }
 
 $(document).ready(function(){
