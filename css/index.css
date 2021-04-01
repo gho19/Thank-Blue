@@ -154,6 +154,7 @@ h1 {
 }
 #front-text{
   width: 70%;
+  height: 100%;
   font-weight: bold;
   line-height: 1.5em;
   font-size: 1.4vw;
@@ -199,7 +200,7 @@ h1 {
   }
   #front-text{
     font-weight: bold;
-    width: 70%;
+    width: 85%;
     font-size: 1.4vh;
     line-height: 1.5em;
     color: black;

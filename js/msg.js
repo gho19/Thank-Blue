@@ -122,12 +122,13 @@ function showMsg(){
     }
     $("#front-text").text(m);
     let time = 25 * m.length + 2000;
-    if (m.length > 600){
-        if ($(window).width() < 700)
-            $("#front-text").css('font-size',`1vh`);
-        else
-            $("#front-text").css('font-size',`1vw`);
+    let size = ($(window).width() < 700) ? `1.5vh` : `1.5vw`;
+    if (m.length > 400){
+        size = ($(window).width() < 700) ? '1vh' : '1vw';
+    }else if (m.length > 600){
+        size = ($(window).width() < 700) ? '0.5vh' : '0.5vw';
     }
+    $("#front-text").css('font-size',size);
     setTimeout(()=>{$("#front-text").fadeToggle(500)},time-500);
     setTimeout(showMsg,time);
 }
