@@ -16,7 +16,9 @@ h1 {
   font-family: 'Spartan', sans-serif;
   font-size: 35px;
 }
-
+#mission{
+  margin-top: 5rem;
+}
 #mission p{
   line-height: 1.5;
   padding-left: 10%;
@@ -46,7 +48,15 @@ h1 {
 #community {
   margin-top: 4vh;
 }
-
+hr{
+  color: silver;
+  opacity: 0.5;
+}
+.team{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .home {
   width:85%;
   float:center;
@@ -257,14 +267,14 @@ body {
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
+/* .row {margin: 0 -5px;} */
 
 /* Clear floats after the columns */
-.row:after {
+/* .row:after {
   content: "";
   display: table;
   clear: both;
-}
+} */
 
 /* Responsive columns */
 @media screen and (max-width: 600px) {
@@ -284,20 +294,56 @@ body {
 }
 
 .column-team {
-  float: left;
+  /* float: left; */
+  display: flex;
   width: 25%;
   padding: 0 30px;
+  font-weight: normal;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+.profile{
+  width: 100%;
+  border-radius: 2%;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
+.row {
+  margin: 0 -5px;
+  display: flex;
+  width:90%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+ion-icon{
+  font-size: 1.3rem;
+  color: #0077b5;
+  display: flex;
+}
+.card-team h2{
+  height: 1.5rem;
+  font-size: 1rem;
+  display: flex;
+}
 
+.card-team p{
+  /* height: 1rem; */
+  font-size: 0.8rem;
+  width: 100%;
+  align-items: flex-start;
+  text-align: left;
+}
 /* Clear floats after the columns */
-.row:after {
+/* .row:after {
   content: "";
   display: table;
   clear: both;
-}
+} */
 
 /* Responsive columns */
 @media screen and (max-width: 600px) {
@@ -305,6 +351,8 @@ body {
     width: 100%;
     display: block;
     margin-bottom: 20px;
+    align-content: flex-start;
+    justify-content: center;
   }
 }
 
