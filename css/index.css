@@ -165,9 +165,9 @@ hr{
 #front-text{
   width: 70%;
   height: 100%;
-  font-weight: bold;
+  /* font-weight: bold; */
   line-height: 1.5em;
-  font-size: 1.4vw;
+  font-size: 1.5vw;
   color: black;
 }
 #progress {
@@ -181,6 +181,9 @@ hr{
 .box-container{
   position: relative;
   display: flex; align-items: center; justify-content: center;
+}
+.card-team a{
+  text-decoration: none;
 }
 @media screen and (max-width: 700px) {
   .msg-text{
@@ -205,13 +208,13 @@ hr{
     border: none;
     font-weight: bold;
     color: black;
-    font-size: 1vh;
+    font-size: 1.1vh;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   }
   #front-text{
-    font-weight: bold;
+    /* font-weight: bold; */
     width: 85%;
-    font-size: 1.4vh;
+    font-size: 1.5vh;
     line-height: 1.5em;
     color: black;
     overflow: auto;

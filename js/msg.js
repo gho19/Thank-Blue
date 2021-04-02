@@ -124,9 +124,9 @@ function showMsg(){
     let time = 25 * m.length + 2000;
     let size = ($(window).width() < 700) ? `1.5vh` : `1.5vw`;
     if (m.length > 400){
-        size = ($(window).width() < 700) ? '1vh' : '1vw';
+        size = ($(window).width() < 700) ? '1.25vh' : '1.25vw';
     }else if (m.length > 600){
-        size = ($(window).width() < 700) ? '0.5vh' : '0.5vw';
+        size = ($(window).width() < 700) ? '0.8vh' : '0.8vw';
     }
     $("#front-text").css('font-size',size);
     setTimeout(()=>{$("#front-text").fadeToggle(500)},time-500);
