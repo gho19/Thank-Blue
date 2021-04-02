@@ -11,17 +11,17 @@
     <link rel="stylesheet" href="css/navbar.css"/>
     <link rel="stylesheet" href="css/footer.css"/>
     <link rel="stylesheet" href="css/index.css"/>
-    
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
-    
+
     <link rel="icon" type="image/png" href="img/logo.png"/>
     <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
-    
+
     <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
-    
+
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -64,8 +64,8 @@
             <li><a href="#mission">Our Mission</a></li>
             <li><a href="#thank-you">Send a Thank You!</a></li>
             <li><a href="#community">Messages</a></li>
+            <li><a href="#our-team">Our Team</a></li>
             <li><a href="#contact-us">Contact Us</a></li>
-            <li><a href="https://forms.gle/VShVB2cKxEp8zJndA" target="_blank">Nominate a Healthcare Hero</a></li>
         </ul>
     </nav>
     <script src="js/navbar.js"></script>
@@ -83,7 +83,7 @@
         <div id="progressbar">
           <div id='progress'></div>
         </div>
-        <div id="progresspercent"></div>  
+        <div id="progresspercent"></div>
       </div>
       <div id="progresstext"></div>
       <br>
@@ -125,19 +125,78 @@
        width="640" height="1650" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" 
        style="width:100%; display: block; margin-left: auto;margin-right: auto; color:#5b3787;" data-aos="fade-up">Loading…</iframe>
     </div>
-    
-    
+
+
     <script src="js/msg.js"></script>
     <script src="https://spreadsheets.google.com/feeds/list/1rE3p9A1fREc8qJUHYhfHUcC5Ws3Kvh3Eb4E82Z-UV0o/1/public/full?alt=json&callback=doData"></script>
     <div id="data"></div>
-    
+
     <div id="community">
-      <h1> MESSAGES </h1>
+      <h1>MESSAGES</h1>
       <br>
         <div id="messages" class="msg-row" data-aos="fade-up">
         </div>
-      
+
       <button class='btn' type='button' id='load'>Load More</button>
+    </div>
+
+    <div id="our-team">
+      <br><br><br><br>
+      <h1> OUR TEAM </h1>
+      <br><br>
+      <div class="row" data-aos="fade-up">
+        <div class="column-team">
+          <div class="card-team">
+            <img src="img/brendan.jpg" style="width: 100%;">
+            <h2>BRENDAN DOLAN</h2>
+            <br>
+            <b>
+              <p>Major: Psychology</p>
+              <p>Hometown: Birmingham, MI</p>
+              <p>Year: Senior</p>
+            </b>
+          </div>
+        </div>
+
+        <div class="column-team">
+          <div class="card-team">
+            <img src="img/omar.jpg" style="width: 100%;">
+            <h2>OMAR HASSAN</h2>
+            <br>
+            <b>
+              <p>Major: Pre-Med</p>
+              <p>Hometown: Ann Arbor, MI</p>
+              <p>Year: Sophomore</p>
+            </b>
+          </div>
+        </div>
+
+        <div class="column-team">
+          <div class="card-team">
+            <img src="img/grant.jpg" style="width: 100%;">
+            <h2>GRANT HO</h2>
+            <br>
+            <b>
+              <p>Major: UX Design & CS</p>
+              <p>Hometown: Denver, CO</p>
+              <p>Year: Sophomore</p>
+            </b>
+          </div>
+        </div>
+
+        <div class="column-team">
+          <div class="card-team">
+            <img src="img/eric.jpg" style="width: 100%;">
+            <h2>ERIC LIAN</h2>
+            <br>
+            <b>
+              <p>Major: Computer Science</p>
+              <p>Hometown: Bridgewater, NJ</p>
+              <p>Year: Junior</p>
+            </b>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="contact-us">
