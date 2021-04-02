@@ -321,22 +321,26 @@ body {
   flex-wrap: wrap;
 }
 ion-icon{
-  font-size: 1.3rem;
-  color: #0077b5;
-  display: flex;
+  font-size: 1.9rem;
+  color: #2867B2;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .card-team h2{
-  height: 1.5rem;
-  font-size: 1rem;
-  display: flex;
+  height: 2.5rem;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .card-team p{
   /* height: 1rem; */
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   width: 100%;
-  align-items: flex-start;
-  text-align: left;
+  text-align: center;
+  font-weight: bold;
 }
 /* Clear floats after the columns */
 /* .row:after {
