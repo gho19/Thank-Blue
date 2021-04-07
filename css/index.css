@@ -338,6 +338,9 @@ ion-icon{
   text-align: center;
 }
 
+.card-.card-team .bio {
+  text-align: left;
+}
 .card-team p{
   /* height: 1rem; */
   font-size: 0.8rem;
