@@ -24,7 +24,7 @@ function drawMsg(messages) {
     var community = $('#messages');
     for(var c=0; c<messages.length; c++) {
         let size = ($(window).width() < 700) ? `1.4vh` : `0.9vw`;
-        if (messages[c].length > 300){
+        if (messages[c].length > 400){
             size = ($(window).width() < 700) ? `1vh` : `0.6vw`;
         }
         var elem = $(
