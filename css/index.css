@@ -30,9 +30,9 @@ h1 {
 #community p{
   line-height: 1.5;
   letter-spacing: 1.2px;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 10px;
+  padding-left: 13px;
+  padding-right: 10px;
+  padding-top: 15px;
   padding-bottom: 10px;
 }
 
@@ -46,7 +46,7 @@ h1 {
 }
 
 #community {
-  margin-top: 4vh;
+  /* margin-top: 4vh; */
 }
 hr{
   color: silver;
@@ -67,7 +67,7 @@ hr{
 }
 
 .msg-row{
-  width: 90%; display: block; margin-left: auto;margin-right: auto;
+  width: 100%; display: block; margin-left: auto;margin-right: auto;
 }
 .image{
   width: 25%; display: flex; margin-left: auto; margin-right: auto;
@@ -81,7 +81,7 @@ hr{
 
 .image1{
   width: 100%; display: block; margin: auto;
-  padding-bottom: 10px; padding-top: 10px;
+  padding-bottom: 3px;
 }
 
 .btn {
@@ -265,8 +265,8 @@ body {
   display: inline-flex;
   flex-direction: row;
   overflow: wrap;
-  width: 33%;
-  padding: 0 10px;
+  width: 25%;
+  padding: 0 3px;
 }
 
 /* Remove extra left and right margins, due to padding */

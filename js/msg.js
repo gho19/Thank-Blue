@@ -5,7 +5,7 @@ var lastName = 'gsx$lastnameoptional';
 var message = 'gsx$messagetohealthcareworkers';
 var year = 'gsx$graduationyear';
 var index = 0;
-var limit = 6;
+var limit = 1000;
 var cur = 0;
 var frontIndex = 0;
 var indices = [];
@@ -16,13 +16,16 @@ function doData(json) {
     for (let i = 0; i < data.length; i++){
         indices.push(i);
     }
-    indices = shuffle(indices);
+    // indices = shuffle(indices);
 }
 
 function drawMsg(messages) {
     if (messages == null) return null;
     var community = $('#messages');
     for(var c=0; c<messages.length; c++) {
+        // let n = 1/(1+Math.exp(-messages[c].length));
+        // console.log(n)
+        // let size = `${Math.min(n,0.8)}em`
         let size = ($(window).width() < 700) ? `1.4vh` : `0.9vw`;
         if (messages[c].length > 400){
             size = ($(window).width() < 700) ? `1vh` : `0.6vw`;
@@ -96,7 +99,7 @@ function readData(parent) {
     var rowData = [];
     if (index >= data.length){
         $('#load').hide();
-        $('#community').append($('<p>No more messages to show for now!</p>'));
+        // $('#community').append($('<p>No more messages to show for now!</p>'));
         return;
     }
     for(var r=index; r<Math.min(data.length,index+limit); r++) {
@@ -108,7 +111,7 @@ function readData(parent) {
     drawMsg(rowData);
     if (index >= data.length){
         $('#load').hide();
-        $('#community').append($('<p>No more messages to show for now!</p>'));
+        // $('#community').append($('<p>No more messages to show for now!</p>'));
         return;
     }
 }
