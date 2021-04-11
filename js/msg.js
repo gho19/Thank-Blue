@@ -26,9 +26,11 @@ function drawMsg(messages) {
         // let n = 1/(1+Math.exp(-messages[c].length));
         // console.log(n)
         // let size = `${Math.min(n,0.8)}em`
-        let size = ($(window).width() < 700) ? `1.4vh` : `0.9vw`;
-        if (messages[c].length > 400){
+        let size = ($(window).width() < 700) ? `1.4vh` : `0.8vw`;
+        if (messages[c].length > 350){
             size = ($(window).width() < 700) ? `1vh` : `0.6vw`;
+        }else if (messages[c].length > 450){
+            size = ($(window).width() < 700) ? `0.9vh` : `0.3vw`;
         }
         var elem = $(
             `<div class="column box-container">
